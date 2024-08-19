@@ -1,0 +1,197 @@
+#heading
+{
+    font-size: 4.3rem;
+    color: blue;
+    font-weight: 800;
+    margin-top: 5px;
+    text-align: center;
+   align-items: center;
+   
+}
+body
+{
+    color: #F0F2F5;
+}
+.container
+{
+    color: #F0F2F5;
+   
+}
+
+.form_container
+{
+   
+   margin: auto;
+   background-color: #FFFFFF;
+   /* 33% */
+   width: 30rem;
+  height: 105vh;
+  justify-content: center;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5); 
+  border-radius: 7px;  
+   margin-top: -15px;
+}
+
+p.create
+{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: -0.7rem;
+    text-align: center;
+    padding-top: 1rem;
+    color: black;
+}
+p.quick
+{
+    font-size: 1.2rem;
+    color: gray;
+    
+    text-align: center;
+}
+.blocking
+{
+    display: block;
+}
+.name
+{
+    margin-top: 1rem;
+    display: flex;
+    justify-content:space-evenly;
+    margin-bottom: 1rem;
+
+}
+.n1
+{
+    /* 45% */
+    width: 13.5rem;
+    height: 40px;
+    border-radius: 7px;
+    font-size: larger;
+    border-color:#CCD0D5;
+    color: #868788;
+    border: 2px solid #CCD0D5 ;
+}
+ .emaill
+{
+    /* width: 94%; */
+    width: 28.1rem;
+    height: 40px;
+    color: #868788;
+    border-radius: 7px;
+    border-color:#CCD0D5;
+    border: 2px solid #CCD0D5 ;
+    font-size: larger;
+    margin: auto;
+    margin-top: 1rem;
+       
+}
+
+.Datee
+{
+margin-left: 1rem;
+font-size: medium;
+color: black;
+}
+
+.date_input
+{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.num_day
+{
+    /* width: 29%; */
+    width: 8.5rem;
+    height: 40px;
+    color: #606770;
+    border-color:#CCD0D5;
+    border-radius: 7px;
+    border: 2px solid #CCD0D5 ;
+}
+
+.boxx
+{
+    border: 1px solid black;
+    width: 8.5rem;
+    height: 40px;
+    color: #868788;
+    border-color:#CCD0D5;
+    border: 2px solid #CCD0D5 ;
+    border-radius: 7px;
+    /* margin-top: 10px; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+
+.genders
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    border-radius: 7px;
+    color: #606770;
+}
+
+.boxx label
+{
+    color: #606770;
+    float: left;
+    margin-left: -15px;
+
+}
+.boxx input
+{
+    float:right;
+    margin-right: -10px;
+}
+.discription
+
+{
+    color: black;
+    margin-left: 12px;
+    margin-top: 20px;
+    color: #606770;
+    
+    
+    margin-right: 12px;
+    font-size: medium;
+}
+
+form button
+{
+ 
+    margin: auto ;
+ margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    width: 35%;
+    border-radius: 7px;
+    color: #FFFFFF;
+    background-color: #119F16;
+    border: none;
+}
+
+.form_container a.already
+{
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-decoration: none;
+    color: blue;
+
+}
+
+::placeholder
+{
+    padding-left: 15px;
+}

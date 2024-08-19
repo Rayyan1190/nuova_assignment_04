@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styling/stylesheet.css">
+</head>
+<body>
+    
+    
+
+   <div class="container">
+    <p id="heading">facebook</p>
+    <div class="form_container">
+        
+        <p class="create">Create a new account</p>
+        <p class="quick">it's quick and easy</p>
+
+        <hr>
+        <form action="">
+
+            <div class="name">
+                <input class="n1" type="text" id="first_name" name="first_name" placeholder="First Name">
+                <input class="n1" type="text" id="sur_name" name="sur_name" placeholder="Sur Name">
+            </div>
+            <input class="blocking emaill" type="email" id="email" name="email" placeholder="Email">
+
+            <input class="blocking emaill" type="password" id="password" name="password" placeholder="Password">
+
+            <p class="Datee">Date of Birth &quest;</p>
+
+
+            <div class="date_input ">
+                <input type="number" class="num_day " id="num_day" min="1" max="31" placeholder="Day" name="num_day">
+                <input type="number" class="num_day " id="num_month" min="1" max="12" placeholder="Month" name="num_month">
+                <input type="number" class="num_day" id="num_year" min="1924" max="2024" placeholder="Year" name="num_year">
+            </div>
+            <p class="Datee">Gender &quest;</p>
+
+            <div class="genders">
+
+                <div class="boxx">
+                    <label for="Malee" class="lab" >Male</label>
+                <input type="radio" class="genderr" id="Malee" name="gender" value="Male" name="3gender">
+
+                </div>               
+               <div class="boxx">
+                <label for="Femalee" class="lab">Females</label>
+                <input type="radio" class="genderr" id="Femalee" name="gender" value="Female" name="3gender">
+               </div>
+<div class="boxx">    
+    <label for="Otherss" class="lab">Others</label>
+    <input type="radio" class="genderr" id="Otherss" name="gender" value="Other" name="3gender">
+</div>
+           
+            </div>
+            <p class="discription">People who use our service may have uploaaded your contact information to Facebook. <a style="color: black; text-decoration:none;" href="">Learn More</a> </p>
+
+            <p class="discription">By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.</p>
+          
+          
+            <button type="button" onclick="loginTOPdf()">Sign Up</button>
+
+
+          
+        </form>
+        <a  class="already" href="">Already have an account?</a>
+
+    </div>
+   </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script>
+        function loginTOPdf()
+        {
+            const firstName=document.getElementById('first_name').value;
+            const surName=document.getElementById('sur_name').value;
+            const myemail=document.getElementById('email').value;
+            const paswword=document.getElementById('password').value;
+            const numday=document.getElementById('num_day').value;
+            const nummonth=document.getElementById('num_month').value;
+            const numyear=document.getElementById('num_year').value;
+          const mygender=document.querySelector('input[name="gender"]:checked').value;
+
+            const pdfcontent=document.createElement('div');
+            pdfcontent.innerHTML=`
+           
+
+               <h1 style="text-align: center; color:black;">User Details</h1>
+   <table style="border-collapse: collapse; display: flex;align-items: center;justify-content: center; text-align: center;">
+    <tr>
+        <td style="border: 3px solid black; width: 300px;">
+            <p style="color: black;"><strong>First Name</strong></p>
+        </td>
+        <td style="border: 3px solid black; width: 300px;">
+          <p style="color: black;">${firstName}</p>
+        </td>
+    </tr>
+
+     <tr>
+        <td style="border: 3px solid black; width: 300px;">
+            <p style="color: black;"><strong>Sur Name</strong></p>
+        </td>
+        <td style="border: 3px solid black; width: 300px;">
+          <p style="color: black;">${surName}</p>
+        </td>
+    </tr>
+    
+     <tr>
+        <td style="border: 3px solid black; width: 300px;">
+            <p style="color: black;"><strong>Email</strong></p>
+        </td>
+        <td style="border: 3px solid black; width: 300px;">
+          <p style="color: black;">${myemail}</p>
+        </td>
+    </tr>
+     <tr>
+        <td style="border: 3px solid black; width: 300px;">
+            <p style="color: black;"><strong>Password</strong></p>
+        </td>
+        <td style="border: 3px solid black; width: 300px;">
+          <p style="color: black;">${paswword}</p>
+        </td>
+    </tr>
+
+     <tr>
+        <td style="border: 3px solid black; width: 300px;">
+            <p style="color: black;"><strong>Date of Birth</strong></p>
+        </td>
+        <td style="border: 3px solid black; width: 300px;">
+          <p style="color: black;">${numday}/${nummonth}/${numyear}</p>
+        </td>
+     
+
+     <tr>
+        <td style="border: 3px solid black; width: 300px;">
+            <p style="color: black;"><strong>Gender</strong></p>
+        </td>
+        <td style="border: 3px solid black; width: 300px;">
+          <p style="color: black;">${mygender}</p>
+        </td>
+    </tr>
+   </table>
+
+              `
+
+            html2pdf(pdfcontent, {
+                margin: 10,
+                filename: 'user-details.pdf',
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            });
+        }
+
+
+        
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
